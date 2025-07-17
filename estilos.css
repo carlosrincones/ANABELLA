@@ -1,1 +1,19 @@
+#malla-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: 800px;
+    margin: auto;
+}
+.asignatura {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #f0f8ff;
+    cursor: pointer;
+    user-select: none;
+}
+.desbloqueada {
+    background-color: #9fe18a;
+}
 
