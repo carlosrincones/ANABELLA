@@ -1,19 +1,57 @@
-#malla-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    max-width: 800px;
-    margin: auto;
+/* estilos.css */
+body {
+  background: #eef6fb;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #183050;
+  margin: 0;
+  padding: 40px 0;
+  text-align: center;
 }
-.asignatura {
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 10px;
-    background-color: #f0f8ff;
-    cursor: pointer;
-    user-select: none;
+h1 { margin-bottom: .2em; color: #274877; }
+#malla {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  margin: 40px auto;
+  max-width: 1280px;
 }
-.desbloqueada {
-    background-color: #9fe18a;
+.semestre {
+  background: #f2faff;
+  border: 2px solid #b7d8f2;
+  border-radius: 18px;
+  padding: 18px 10px;
+  min-width: 260px;
+  max-width: 348px;
+  box-shadow: 0 2px 12px #cdd2dc30;
 }
-
+.semestre>h3 {
+  margin: 10px 0 18px 0;
+  color: #4180b2;
+  font-size: 1.19em;
+  letter-spacing: 2px;
+}
+.materia {
+  margin: 10px 0;
+  background: #fff;
+  border-radius: 9px;
+  border: 1px solid #bfe7f9;
+  box-shadow: 0 2px 8px #c8e6f034;
+  padding: 8px 4px 5px 10px;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+  font-size: .96em;
+  color: #274877;
+  transition: background .2s, border .2s;
+}
+.materia.desbloqueada { background: #caf2cd; border-color: #7be07e; cursor: pointer; }
+.materia.bloqueada   { background: #fcfdff; color: #adbdd2; cursor: not-allowed; }
+.materia.seleccionada { background: #91e9f8; border: 2px solid #1188c4; font-weight: bold; }
+.materia .codigo { font-family: monospace; font-size: .88em; color: #66a1c5;}
+.materia .creditos { position: absolute; right: 11px; top: 2px; font-size: .84em; color: #5cb178;}
+.materia .prerrequisitos { font-size: small; color: #ad7947; display: block;}
+.materia.electiva { background: #f4e6ff; border-color: #c2a3e7;}
+#reset { margin:25px auto 10px auto; padding: 8px 20px; border-radius: 6px; border:none; background: #86b6ee; font-size:1em; color: #183050;}
+#reset:hover { background: #60a5fa;}
+footer { margin-top: 20px; font-size:small; color: #b0b8bd;}
