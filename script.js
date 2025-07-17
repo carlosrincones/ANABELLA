@@ -181,6 +181,6 @@ document.getElementById("reset").onclick = () => {
 renderMalla();
 
     renderMalla();
-  }
+  
 };
 renderMalla();
