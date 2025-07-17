@@ -169,6 +169,16 @@ function renderMalla() {
       divSem.appendChild(matDiv);
     });
     cont.appendChild(divSem);
+  });
+}
+document.getElementById("reset").onclick = () => {
+  if(confirm("¿Seguro que deseas reiniciar tu progreso?")) {
+    aprobadas = [];
+    guardarProgreso();
+    renderMalla();
+  }
+};
+renderMalla();
 
     renderMalla();
   }
